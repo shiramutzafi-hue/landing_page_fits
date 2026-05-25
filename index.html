@@ -147,10 +147,12 @@
   .btn-primary:hover { opacity: 0.75; }
 
   /* iPhone video placeholder */
-  .hero-phone {
-    opacity: 0;
-    margin-bottom: 2.5rem;
-  }
+/* iPhone video placeholder */
+.hero-phone {
+  opacity: 0;
+  margin-bottom: 2.5rem;
+  animation: fadeUp 0.8s ease 1s forwards; /* מוודא שהאנימציה תציג אותו */
+}
 
   .phone-frame {
     position: relative;
@@ -199,14 +201,18 @@
     height: 100%;
     object-fit: cover;
     border-radius: 44px;
+    display: block;
   }
 
-  .phone-video-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
+ .phone-video-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  /* שתי השורות הקריטיות שחסרות לך כדי שהסרטון יפתח את התיבה: */
+  width: 100%;
+  height: 100%;
+}
 
   .phone-video-placeholder svg { opacity: 0.3; }
 
